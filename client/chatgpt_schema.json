@@ -1,0 +1,46 @@
+{
+  "tools": [
+    {
+      "name": "discover_sources",
+      "description": "List all available data sources",
+      "input_schema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "list_metrics",
+      "description": "List all available metrics",
+      "input_schema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "calc_kpi",
+      "description": "Calculate a KPI metric",
+      "input_schema": {
+        "type": "object",
+        "properties": { "metric": { "type": "string" } }
+      }
+    },
+    {
+      "name": "ask",
+      "description": "Ask a natural language question about the data. Returns SQL and rows.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "question": { "type": "string" }
+        },
+        "required": ["question"]
+      }
+    },
+
+    {
+      "name": "query",
+      "description": "Run raw SQL on a data source",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "source": { "type": "string" },
+          "sql": { "type": "string" },
+          "dialect": { "type": "string" }
+        }
+      }
+    }
+  ]
+}
