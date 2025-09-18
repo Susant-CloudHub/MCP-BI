@@ -47,6 +47,7 @@ mcp_tools = {
     "list_metrics": list_metrics,
     "calc_kpi": calc_kpi,
     "query": query,
+    "ask": ask, 
     # NEW
     "register_s3_table": register_s3_table,
     "ask_s3": ask_s3,
